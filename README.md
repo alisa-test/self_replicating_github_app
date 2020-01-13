@@ -28,12 +28,12 @@ Fill in the fields and click **Create app**.
 Almost there :)
 
 You're now in the **Deploy** pane. 
-Select the "Connect to GitHub" tile, link your account by following the onscreen instructions,
+Select the "Connect to GitHub" tile, link your GitHub account by following the onscreen instructions,
 and then paste **self_replicating_github_app** as the name of your repository.
 You can enable automatic deploys and then click **Deploy Branch**.
 The build process will start...
 
-If the build fails, you have a [troubleshooting](####Troubleshooting) section below at your disposal.
+If the build fails, you have a [troubleshooting](Troubleshooting) section below at your disposal.
 
 By the way, your app already has its own URL! 
 You can get it in the **Settings** pane from the **Domains** section.
@@ -48,14 +48,16 @@ and this is the page where you can get them: <br>
 https://github.com/settings/applications/new
 
 Pick a comprehensible name and put a few words into the description -- that's the hardest part.
-In the **Homepage URL** field, put the full link to your application that you copied from the **Settings** pane earlier.
-Let's suppose you have `https://my-first-app.herokuapp.com/`
-In the **Authorization callback URL**, put the same application link and add `/replicating_code` in the end. 
-So that you will have `https://my-first-app.herokuapp.com/replicating_code` as the callback URL.
+In the **Homepage URL** field, put the full link to your application that 
+you copied from the **Settings** pane earlier. <br>
+Let's suppose you have `https://my-first-app.herokuapp.com/` as your **Homepage URL**.<br>
+In the **Authorization callback URL**, put the same application link and add `/replicating_code` in the end.<br> 
+So that you will have `https://my-first-app.herokuapp.com/replicating_code` as the callback URL. <br>
 After the registration, you will get the **Client ID** and the **Client Secret**. 
 That's what we're going to set as environmental variables. 
+
 Let's go back to our heroku app, the same familiar **Settings** pane 
-and click **Reveal Config Vars** button in the **Config Vars** section. 
+and click **Reveal Config Vars** button in the **Config Vars** section.
 You will see two blank fields: KEY and VALUE. To set up **Client ID**, 
 put `client_id` into the KEY field and its value (alphanumeric code you got from GitHub) into the VALUE field. 
 For **Client Secret**, the KEY is `client_secret` and the VALUE is the code you got from GitHub.
@@ -93,7 +95,7 @@ It's easily fixable, though, with just one line in console:
 Well, you can use the app to copy the code of any public repo in GitHub. 
 What you need, is open app.py file and assign a new value for the `REPO_WITH_APP_CODE` variable.
 To work properly, it should be a github username followed by the repository name, 
-like `'alisa-test//self_replicating_github_app'`. Commit your changes to GitHub and 
+like `'alisa-test/self_replicating_github_app'`. Commit your changes to GitHub and 
 deploy the changed code to your app server (unless you enabled those convenient automatic deploys). 
 
 Have Fun!
@@ -101,6 +103,6 @@ Have Fun!
 ____
 
 If you have read until this, you might be interested in 
-the technical documentation for this project, you nerd!
+the technical specification for this project, you nerd!
 
 It's here, in a [Google Doc](https://docs.google.com/document/d/1cx0FohDNI9EP5bybJ_hh9nxaztiKvt_zSnMioeu3cSg/edit?usp=sharing)
