@@ -1,6 +1,6 @@
 This is an application that copies its code to your GitHub profile. 
 
-###How it works?
+### How it works?
 
 You click the link: <br>
 https://github-replication-app.herokuapp.com/ <br>
@@ -10,13 +10,13 @@ The code then gets automatically copied to a newly created **self_replicating_gi
 repository in your GitHub.
 
 
-###How to create the same app?
+### How to create the same app?
 
 
 If you want to make the same app, below are instructions to make this happen.
 You already have the most important part -- the code -- in your GitHub.
 
-####First, let's spin up an app server
+#### First, let's spin up an app server
 
 If you have never done this before, please don't be afraid. 
 There are solutions that make it easy and I will explain how it's done with heroku.com service.
@@ -39,7 +39,7 @@ By the way, your app already has its own URL!
 You can get it in the **Settings** pane from the **Domains** section.
 Now let's go there and copy the application link to prepare for the next step.
 
-####Second, let's set up environment variables
+#### Second, let's set up environment variables
 
 Although it might sound complicated, the process is straightforward and 
 does't require any special technical skills. 
@@ -64,7 +64,7 @@ You're all set! Now you have a working link to _your_ application, which is the 
 
 One more thing...
 
-####Troubleshooting
+#### Troubleshooting
 
 Yeah, things don't always go smoothly and you need to be prepared. 
 In case something goes wrong on heroku's side, you can see this in the application logs.
@@ -88,7 +88,7 @@ a web server for your app (which you need). The error looks like this in logs:
 It's easily fixable, though, with just one line in console:
 `heroku ps:scale web=1 -a my-first-app`
 
-###What else you can do with the app?
+### What else you can do with the app?
 
 Well, you can use the app to copy the code of any public repo in GitHub. 
 What you need, is open app.py file and assign a new value for the `REPO_WITH_APP_CODE` variable.
