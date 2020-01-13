@@ -9,8 +9,12 @@ app = Flask(__name__)
 
 CLIENT_ID = os.environ.get('client_id')
 CLIENT_SECRET = os.environ.get('client_secret')
-# Name of the new repo in user's github repository with the replicated code
+# Repository where to copy the code from
+REPO_WITH_APP_CODE = 'alisa-test/self_replicating_github_app'
+# Name of the new repository in user's github that will contain the replicated code
 NEW_REPO_NAME = 'self_replicating_github_app'
+# Access scope allowed by access token
+SCOPE = 'public_repo'
 
 
 @app.errorhandler(RequestException)
@@ -20,7 +24,7 @@ def handle_exception(error):
 
 @app.route('/')
 def redirect_to_github_auth():
-    return redirect(f'https://github.com/login/oauth/authorize?client_id={CLIENT_ID}&scope=public_repo')
+    return redirect(f'https://github.com/login/oauth/authorize?client_id={CLIENT_ID}&scope={SCOPE}')
 
 
 @app.route('/replicating_code', methods=['GET', 'POST'])
@@ -47,7 +51,7 @@ def replicate_app_code():
     # Get new repo as github.Repository.Repository object
     new_repo = github_client.get_repo(f'{auth_user_name}/{NEW_REPO_NAME}')
     # Get repo with the app code as Github.Repository object
-    repo_with_app_code = github_client.get_repo('alisa-test/replication_app_1')
+    repo_with_app_code = github_client.get_repo(REPO_WITH_APP_CODE)
     contents = repo_with_app_code.get_contents('')
     # Copy all files from app_repo to new_app_repo
     for file_content in contents:
