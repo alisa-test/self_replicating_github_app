@@ -50,9 +50,11 @@ https://github.com/settings/applications/new
 Pick a comprehensible name and put a few words into the description -- that's the hardest part.
 In the **Homepage URL** field, put the full link to your application that 
 you copied from the **Settings** pane earlier. <br>
+
 Let's suppose you have `https://my-first-app.herokuapp.com/` as your **Homepage URL**.<br>
 In the **Authorization callback URL**, put the same application link and add `/replicating_code` in the end.<br> 
 So that you will have `https://my-first-app.herokuapp.com/replicating_code` as the callback URL. <br>
+
 After the registration, you will get the **Client ID** and the **Client Secret**. 
 That's what we're going to set as environmental variables. 
 
