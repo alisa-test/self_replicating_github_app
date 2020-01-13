@@ -14,7 +14,7 @@ repository in your GitHub.
 
 
 If you want to make the same app, below are instructions to make this happen.
-You already have the most important part -- the code -- in your GitHub.
+You already have the most important part - the code - in your GitHub.
 
 #### First, let's spin up an app server
 
