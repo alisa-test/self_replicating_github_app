@@ -33,7 +33,7 @@ and then paste **self_replicating_github_app** as the name of your repository.
 You can enable automatic deploys and then click **Deploy Branch**.
 The build process will start...
 
-If the build fails, you have a [troubleshooting](Troubleshooting) section below at your disposal.
+If the build fails, you have a Troubleshooting section below at your disposal.
 
 By the way, your app already has its own URL! 
 You can get it in the **Settings** pane from the **Domains** section.
